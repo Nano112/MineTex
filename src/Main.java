@@ -1,6 +1,4 @@
-import org.scilab.forge.jlatexmath.TeXConstants;
-import org.scilab.forge.jlatexmath.TeXFormula;
-import org.scilab.forge.jlatexmath.TeXIcon;
+import org.scilab.forge.jlatexmath.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -13,18 +11,8 @@ public class Main
 {
         public static void main(String[] args) throws IOException
         {
-                TeXFormula formula = new TeXFormula("x=\\frac{-b \\pm \\sqrt {b^2-4ac}}{2a}");
-                TeXIcon icon = formula.createTeXIcon(TeXConstants.STYLE_DISPLAY, 10);
-                icon.setInsets(new Insets(5, 5, 5, 5));
-                BufferedImage image = new BufferedImage(icon.getIconWidth(),icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
-                Graphics2D g2 = image.createGraphics();
-                g2.setColor(Color.white);
-                g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
-                JLabel jl = new JLabel();
-                jl.setForeground(new Color(0, 0, 0));
-                icon.paintIcon(jl, g2, 0, 0);
-
-                File outputfile = new File("image.png");
-                ImageIO.write(image, "png", outputfile);
+                 TeXFormula formula = new TeXFormula("\\sum_0^\\infty x=\\frac{-b \\pm \\sqrt {b^2-4ac}}{2a}");
+                BufferedImage im = (BufferedImage)formula.createBufferedImage(TeXConstants.STYLE_DISPLAY,20,new Color(0,0,0),new Color(255,255,255));
+                ImageIO.write(im, "png", new File("image.png"));
         }
 }
