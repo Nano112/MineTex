@@ -14,7 +14,7 @@ public class Main
         public static void main(String[] args) throws IOException
         {
                 TeXFormula formula = new TeXFormula("x=\\frac{-b \\pm \\sqrt {b^2-4ac}}{2a}");
-                TeXIcon icon = formula.createTeXIcon(TeXConstants.STYLE_DISPLAY, 200);
+                TeXIcon icon = formula.createTeXIcon(TeXConstants.STYLE_DISPLAY, 10);
                 icon.setInsets(new Insets(5, 5, 5, 5));
                 BufferedImage image = new BufferedImage(icon.getIconWidth(),icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
                 Graphics2D g2 = image.createGraphics();
