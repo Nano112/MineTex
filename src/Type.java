@@ -22,11 +22,19 @@ public class Type{
     public BoundingBox getBB(Type t)
     {
         //TODO: e tailles seront à changer, ici elles sont à titre d'exemple
-        if (t.DefautlSizeClass ==1 )
-        {
-            return new BoundingBox(3, 5);
+        switch (t.DefautlSizeClass){
+
+            case 2:
+                return new BoundingBox(5, 7);
+
+            case 3:
+                return new BoundingBox(7, 10);
+
+            default:
+                return new BoundingBox(3, 5);
         }
 
-        return null;
+
+
     }
 }
