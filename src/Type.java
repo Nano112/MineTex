@@ -2,7 +2,7 @@
 public class Type{
 
     int DefautlSizeClass;
-
+    //J'ai mis des valeurs à la con pour l'instant.
     public static final Type CHIFFRE = new Type(1);
     public static final Type LETTRE_MIN = new Type(2);
     public static final Type LETTRE_MAJ = new Type(2);
