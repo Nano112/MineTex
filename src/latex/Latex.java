@@ -1,0 +1,7 @@
+
+public class Latex
+
+{
+    //COUCOU
+
+}
