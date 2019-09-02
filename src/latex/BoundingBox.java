@@ -5,7 +5,7 @@ public class BoundingBox{
     int sizeClass;
 
 
-    public void BoundingBox(int size_x, int size_y)
+    public BoundingBox(int size_x, int size_y)
     {
         this.sizeX = size_x;
         this.sizeY = size_y;
