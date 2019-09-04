@@ -1,5 +1,5 @@
 
-public class Latex
+public class Latex //C'est pas du Latex Faudras changer de nom je pense
 
 {
      /*
@@ -24,6 +24,8 @@ public class Latex
      Opérand: lim, d/dx, intégrale, fraction, racine
 
      Osef du calcul tensoriel? (vecteur, le \bar?, produit contracté, matrices)
+     ^
+     Pendant qu'on y est oui mais deja faut avoir les operations de base plus des trucs moin basique comme des sommes
       */
 
 }

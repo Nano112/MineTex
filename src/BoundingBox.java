@@ -1,6 +1,6 @@
 
 public class BoundingBox{
-
+    //Bounding box should be expressed as an aspect Ratio and scale not dimentions
     int sizeX;
     int sizeY;
     int sizeClass;
