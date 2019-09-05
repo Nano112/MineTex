@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="Worked on Type.java">
-      <change afterPath="$PROJECT_DIR$/src/graphics/ColorName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/MyColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/lookup_5x7.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoundingBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoundingBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Latex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Type.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +28,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -144,6 +142,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Commit test." />
     <MESSAGE value="Added BoudinxBox.java and Type.java" />
     <MESSAGE value="Fixed the contructors." />
