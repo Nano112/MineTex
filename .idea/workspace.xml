@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="Worked on Type.java">
-      <change afterPath="$PROJECT_DIR$/src/tiles/lookup_5x7.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Type.java" beforeDir="false" />
-    </list>
+    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567461328233</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added lookup_5x7.bmp">
+      <created>1567724201958</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567724201958</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +151,7 @@
     <MESSAGE value="Fixed the contructors." />
     <MESSAGE value="Restructed the project (issues with packages)" />
     <MESSAGE value="Worked on Type.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on Type.java" />
+    <MESSAGE value="Added lookup_5x7.bmp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added lookup_5x7.bmp" />
   </component>
 </project>
