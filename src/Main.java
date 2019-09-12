@@ -12,7 +12,6 @@ public class Main
 {
         public static void main(String[] args) throws IOException, IncorrectBracketException, BadFormatting {
 
-
                 ExpressionTree test = new ExpressionTree("Ceci est un + test = 2");
                 test.parse();
                 test.Display();

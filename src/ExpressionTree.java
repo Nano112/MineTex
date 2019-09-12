@@ -1,5 +1,6 @@
 import Exceptions.BadFormatting;
 import Exceptions.IncorrectBracketException;
+import tiles.Tiles;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,7 @@ public class ExpressionTree {
         this.root = true;
         this.offset = 0;
     }
-    //TODO: DO not forget to add offset when creating new childs.
+
     public ExpressionTree(String[] current_, int offset_)
     {
         this.currentExpression = current_;
@@ -40,8 +41,8 @@ public class ExpressionTree {
                 i = findNextBracket(i);
             }
 
-            //if(ExpressionInfo.isBinaryOperand(this.currentExpression[i]))
-            if(this.currentExpression[i].equals("+") || this.currentExpression[i].equals("="))
+
+            if(Tiles.isBinaryOperand(this.currentExpression[i]))
             {
                 this.id = this.currentExpression[i];
                 if(i==0 || i+1 == this.currentExpression.length)

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="Starting to work on parser">
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/BadFormatting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/IncorrectBracketException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExpressionInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExpressionTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ParseTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="Added Exceptions, Created more classes.">
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/UnknowStringException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MathObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TileType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jlatexmath_1_0_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jlatexmath_1_0_7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExpressionInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpressionTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -187,7 +188,7 @@
     <MESSAGE value="Worked on Type.java" />
     <MESSAGE value="Added lookup_5x7.bmp" />
     <MESSAGE value="Updated lookup_5x7.bmp" />
-    <MESSAGE value="Starting to work on parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting to work on parser" />
+    <MESSAGE value="Added Exceptions, Created more classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Exceptions, Created more classes." />
   </component>
 </project>
