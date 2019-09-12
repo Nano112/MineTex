@@ -1,3 +1,3 @@
 # MineTex
 
-Renders a latex code into Minecraft blocks.
+Minimalistic Latex renderer for low resolution devices.
