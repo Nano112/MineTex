@@ -10,7 +10,10 @@ public class MathObject {
     }
 
 
-
+    public String getExpression()
+    {
+        return this.expression;
+    }
 
 
 

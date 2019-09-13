@@ -13,7 +13,7 @@ public class ExpressionTree {
     boolean root = false;
 
 
-    String id = "";
+    MathObject mObject;
     int offset;
     public ExpressionTree(String curent_)
     {
@@ -41,18 +41,22 @@ public class ExpressionTree {
                 i = findNextBracket(i);
             }
 
-
             if(Tiles.isBinaryOperand(this.currentExpression[i]))
             {
-                this.id = this.currentExpression[i];
+                this.mObject = new MathObject(this.currentExpression[i], TileType.BOperand);
                 if(i==0 || i+1 == this.currentExpression.length)
                 {
-
                     System.out.println(i);
                     throw new BadFormatting();
                 }else{
                     binaryOperandIndex = i;
-                    break;
+                    childsLeft.add(new ExpressionTree(subString(this.currentExpression, 0, binaryOperandIndex), 0));
+
+                    childsRight.add(new ExpressionTree(subString(this.currentExpression, binaryOperandIndex+1, this.currentExpression.length), binaryOperandIndex));
+
+                    childsLeft.get(0).parse();
+                    childsRight.get(0).parse();
+                    return;
                 }
             }
 
@@ -61,22 +65,9 @@ public class ExpressionTree {
 
         if (binaryOperandIndex != 0)
         {
-            childsLeft.add(new ExpressionTree(subString(this.currentExpression, 0, binaryOperandIndex), 0));
 
-            childsRight.add(new ExpressionTree(subString(this.currentExpression, binaryOperandIndex+1, this.currentExpression.length), binaryOperandIndex));
-
-
-            childsLeft.get(0).parse();
-            childsRight.get(0).parse();
         }else{
-            String word = "";
-            for (int j = 0; j<this.currentExpression.length; j++)
-            {
-                word += this.currentExpression[j];
 
-            }
-
-            this.id = word;
         }
 
 
@@ -90,7 +81,7 @@ public class ExpressionTree {
         {
             et.Display();
         }
-        System.out.print("id=\""+this.id+"\",");
+        System.out.print("id=\""+this.mObject.getExpression()+"\",");
         for(ExpressionTree et : childsRight)
         {
             et.Display();
