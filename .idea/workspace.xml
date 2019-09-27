@@ -4,7 +4,7 @@
     <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpressionTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MathObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MathObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +33,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jlatexmath-1.0.7.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Minecraft decompiler/MCP1.7.3/mcp b1.7.3/eclipse/Client" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -161,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568312727637</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="few modifications">
+      <created>1568404144156</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568404144156</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +197,7 @@
     <MESSAGE value="Added lookup_5x7.bmp" />
     <MESSAGE value="Updated lookup_5x7.bmp" />
     <MESSAGE value="Added Exceptions, Created more classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Exceptions, Created more classes." />
+    <MESSAGE value="few modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="few modifications" />
   </component>
 </project>

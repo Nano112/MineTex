@@ -167,6 +167,29 @@ public class Tiles {
             };
 
 
+    public static boolean isGreekLetter(String str)
+    {
+        for(String op : tilesGreekLetters)
+        {
+            if(op.equals(str))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isOperand(String str)
+    {
+        for(String op : tilesOperands)
+        {
+            if(op.equals(str))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public static boolean isBinaryOperand(String str)
     {
         for(String op : tilesBinaryOperands)

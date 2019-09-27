@@ -40,7 +40,7 @@ public class ExpressionTree {
             {
                 i = findNextBracket(i);
             }
-
+            //Step 1
             if(Tiles.isBinaryOperand(this.currentExpression[i]))
             {
                 this.mObject = new MathObject(this.currentExpression[i], TileType.BOperand);
@@ -51,18 +51,14 @@ public class ExpressionTree {
                 }else{
                     binaryOperandIndex = i;
                     childsLeft.add(new ExpressionTree(subString(this.currentExpression, 0, binaryOperandIndex), 0));
-
                     childsRight.add(new ExpressionTree(subString(this.currentExpression, binaryOperandIndex+1, this.currentExpression.length), binaryOperandIndex));
-
                     childsLeft.get(0).parse();
                     childsRight.get(0).parse();
                     return;
                 }
             }
-
             i++;
         }
-
         if (binaryOperandIndex != 0)
         {
 
