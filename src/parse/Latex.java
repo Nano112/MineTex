@@ -1,12 +1,13 @@
+package parse;
 
-public class Latex //C'est pas du Latex Faudras changer de nom je pense
+public class Latex //C'est pas du parse.Latex Faudras changer de nom je pense
 
 {
      /*
      HOWTO:
 
      Chaque élément de base a une taille (Bounding Box) par défault.
-     Lorsque que l'on parse le code Latex, on aura un arbre avec des lettres et des chiffres en tant que feuilles
+     Lorsque que l'on parse le code parse.Latex, on aura un arbre avec des lettres et des chiffres en tant que feuilles
      et des symboles/opérand en tant que noeuds.
      Chaque Operand et symbole a des conditions sur la taille (pour \sum_{k=1}^{n}{f(k)} il faut que la taille de k=1 et de n soit inférieure à f(k) -> D'ou le sizeClass.
      (sizeClass = hauteur du caratère? )

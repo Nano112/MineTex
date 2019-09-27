@@ -14,7 +14,7 @@ import static tiles.TileType.*;
 public class Tiles {
 
     //WIP
-    public static Map<String, List<Tuple2>> tilePositions = new ObjectMapper().rea
+  //  public static Map<String, List<Tuple2>> tilePositions = new ObjectMapper().rea
     public static String[] tilesNumbers = new String[]
             {
                     "0",
@@ -185,12 +185,22 @@ public class Tiles {
                     "\\bar",
                     "\\abs",
                     "\\sqrt",
+                    "\\sum",
+                    "\\prod"
             };
 
 
     public static boolean isGreekLetter(String str)
     {
-        for(String op : tilesGreekLetters)
+        for(String op : tilesBigGreekLetters)
+        {
+            if(op.equals(str))
+            {
+                return true;
+            }
+        }
+
+        for(String op : tilesSmallGreekLetters)
         {
             if(op.equals(str))
             {
@@ -223,10 +233,69 @@ public class Tiles {
         return false;
     }
 
-    public static BufferedImage getImage(String string, int size) throws UnknownTile
+    public static String lookForBigGreekLetter(String[] str, int index)
     {
+        boolean flag;
+        for (String op : tilesBigGreekLetters)
+        {
+            String[] opa = op.split("");
+            flag = true;
+            for (int i = 0; i < op.length(); i++)
+            {
+                if(!opa[i].equals(str[i+index]))
+                {
+                    flag = false;
+                }
+            }
 
+            if (flag) return op;
+        }
+        return null;
     }
+
+    public static String lookForSmallGreekLetter(String[] str, int index)
+    {
+        boolean flag;
+        for(String op : tilesSmallGreekLetters)
+        {
+            String[] opa = op.split("");
+            flag = true;
+            for(int i = 0; i<op.length(); i++)
+            {
+                if(!opa[i].equals(str[i+index]))
+                {
+                    flag = false;
+                }
+            }
+
+            if(flag) return op;
+
+        }
+        return null;
+    }
+
+    public static String loofFortilesOperands(String[] str, int index)
+    {
+        boolean flag;
+        for(String op : tilesOperands)
+        {
+            String[] opa = op.split("");
+            flag = true;
+            for(int i = 0; i<op.length(); i++)
+            {
+
+                if(!opa[i].equals(str[i+index]))
+                {
+                    flag = false;
+                }
+            }
+
+            if(flag) return op;
+
+        }
+        return null;
+    }
+
 }
 
 

@@ -7,5 +7,7 @@ public enum TileType {
     SmallGreekLetter,
     BigGreekLetter,
     BOperand,
-    Operand
+    Operand,
+    Brackets,
+    Concat
 }

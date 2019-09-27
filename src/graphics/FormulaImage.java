@@ -45,7 +45,7 @@ public class FormulaImage {
         this.image.setRGB(x,y,this.foreGround.getColorValue().getRGB());
     }
 
-    public
+
 
 
 

@@ -1,7 +1,11 @@
+package parse;
+
 import tiles.TileType;
 
 public class MathObject {
 
+
+    public static MathObject concat = new MathObject("", TileType.Concat);
 
     String expression;
     TileType tt;

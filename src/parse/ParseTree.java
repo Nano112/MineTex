@@ -1,3 +1,5 @@
+package parse;
+
 public class ParseTree {
 
     String expression;

@@ -1,23 +1,17 @@
+import Exceptions.BadBracketsFormatException;
 import Exceptions.BadFormatting;
 import Exceptions.IncorrectBracketException;
-import org.scilab.forge.jlatexmath.*;
+import parse.ExpressionTree;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 public class Main
 {
-        public static void main(String[] args) throws IOException, IncorrectBracketException, BadFormatting {
+        public static void main(String[] args) throws IOException, IncorrectBracketException, BadFormatting, BadBracketsFormatException {
 
-                ExpressionTree test = new ExpressionTree("Ceci est un + test = 2");
+                ExpressionTree test = new ExpressionTree("a+b+\\frac{1}{2}=\\sum{k=1}{n}{2k-1}+j");
                 test.parse();
                 test.Display();
-                TeXFormula formula = new TeXFormula("\\sum_0^\\infty x=\\frac{-b \\pm \\sqrt {b^2-4ac}}{2a}");
-                BufferedImage im = (BufferedImage)formula.createBufferedImage(TeXConstants.STYLE_DISPLAY,20,new Color(0,0,0),new Color(255,255,255));
-                ImageIO.write(im, "png", new File("image.png"));
         }
 }
 
