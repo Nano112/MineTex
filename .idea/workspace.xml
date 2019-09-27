@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="">
+    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="made a functional parser base">
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/BadBracketsFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/UnknownTile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/structures/TilePosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/structures/Tuple2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/TileOperand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/TileType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpressionTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoundingBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/ExpressionTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/Latex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MathObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/MathObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParseTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/ParseTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TileType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/FormulaImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tiles/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +54,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.23724137" />
     <property name="project.structure.side.proportion" value="0.275018" />
   </component>
@@ -70,7 +84,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MineTex" />
@@ -168,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568404144156</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="few modifications">
+      <created>1569598970003</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569598970003</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +219,9 @@
     <MESSAGE value="Updated lookup_5x7.bmp" />
     <MESSAGE value="Added Exceptions, Created more classes." />
     <MESSAGE value="few modifications" />
-    <option name="LAST_COMMIT_MESSAGE" value="few modifications" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/Nano11258/MineTex&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="made a functional parser (partially)." />
+    <MESSAGE value="Made a functional parser base." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a functional parser base." />
   </component>
 </project>

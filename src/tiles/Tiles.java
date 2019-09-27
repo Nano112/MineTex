@@ -1,7 +1,20 @@
 package tiles;
 
+import Exceptions.UnknownTile;
+import structures.Tuple2;
+
+import java.awt.image.BufferedImage;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
+import static tiles.TileType.*;
+
 public class Tiles {
 
+    //WIP
+    public static Map<String, List<Tuple2>> tilePositions = new ObjectMapper().rea
     public static String[] tilesNumbers = new String[]
             {
                     "0",
@@ -15,7 +28,7 @@ public class Tiles {
                     "9"
             };
 
-    public static String[] tilesLetters = new String[]
+    public static String[] tilesSmallLetters = new String[]
             {
                     "a",
                     "b",
@@ -43,7 +56,11 @@ public class Tiles {
                     "w",
                     "x",
                     "y",
-                    "z",
+                    "z"
+            };
+
+    public static String[] tilesBigLetters = new String[]
+            {
                     "A",
                     "B",
                     "C",
@@ -72,7 +89,7 @@ public class Tiles {
                     "Z"
             };
 
-    public static String[] tilesGreekLetters = new String[]
+    public static String[] tilesSmallGreekLetters = new String[]
             {
                     "\\alpha",
                     "\\beta",
@@ -97,7 +114,11 @@ public class Tiles {
                     "\\phi",
                     "\\chi",
                     "\\psi",
-                    "\\omega",
+                    "\\omega"
+            };
+
+    public static String[] tilesBigGreekLetters = new String[]
+            {
                     "\\Alpha",
                     "\\Beta",
                     "\\Gamma",
@@ -200,6 +221,11 @@ public class Tiles {
             }
         }
         return false;
+    }
+
+    public static BufferedImage getImage(String string, int size) throws UnknownTile
+    {
+
     }
 }
 

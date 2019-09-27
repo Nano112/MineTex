@@ -1,5 +1,6 @@
 import Exceptions.BadFormatting;
 import Exceptions.IncorrectBracketException;
+import tiles.TileType;
 import tiles.Tiles;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class ExpressionTree {
     ArrayList<ExpressionTree> childsRight = new ArrayList();
     String[] currentExpression;
     boolean root = false;
-
+    boolean hasMathObject;
 
     MathObject mObject;
     int offset;
@@ -19,18 +20,20 @@ public class ExpressionTree {
     {
         this.currentExpression = curent_.split("");
         this.root = true;
+        this.hasMathObject = false;
         this.offset = 0;
     }
 
-    public ExpressionTree(String[] current_, int offset_)
+    public ExpressionTree(String[] current_, int offset_, boolean bool)
     {
         this.currentExpression = current_;
         this.offset = offset_;
+        this.hasMathObject = bool;
     }
 
     public void parse() throws BadFormatting, IncorrectBracketException {
         //Step 1: search for binary operand : "+", "=" , ",", "=>", etc... outside of '{ }'
-
+        //Step 2: search for "/" caracter and identify if it is an operand or a letter.
 
         int binaryOperandIndex = 0;
         int i= 0;
@@ -44,27 +47,45 @@ public class ExpressionTree {
             if(Tiles.isBinaryOperand(this.currentExpression[i]))
             {
                 this.mObject = new MathObject(this.currentExpression[i], TileType.BOperand);
+                this.hasMathObject = true;
                 if(i==0 || i+1 == this.currentExpression.length)
                 {
-                    System.out.println(i);
                     throw new BadFormatting();
                 }else{
                     binaryOperandIndex = i;
-                    childsLeft.add(new ExpressionTree(subString(this.currentExpression, 0, binaryOperandIndex), 0));
-                    childsRight.add(new ExpressionTree(subString(this.currentExpression, binaryOperandIndex+1, this.currentExpression.length), binaryOperandIndex));
+                    childsLeft.add(new ExpressionTree(subString(this.currentExpression, 0, binaryOperandIndex), 0, false));
+                    childsRight.add(new ExpressionTree(subString(this.currentExpression, binaryOperandIndex+1, this.currentExpression.length), binaryOperandIndex, false));
                     childsLeft.get(0).parse();
                     childsRight.get(0).parse();
                     return;
                 }
             }
+
+            if(this.currentExpression[i] == "\\")
+            {
+                String biggreekletter = Tiles.lookForBigGreekLetter(this.currentExpression, i+1);
+                String smallgreekletter = Tiles.lookForBigGreekLetter(this.currentExpression, i+1);
+                if(biggreekletter != null)
+                {
+                    MathObject mob = new MathObject(biggreekletter, TileType.BigGreekLetter);
+                    i += biggreekletter.length()+1;
+
+                }
+                else if(smallgreekletter != null)
+                {
+                    MathObject mob = new MathObject(smallgreekletter, TileType.BigGreekLetter);
+                    i += smallgreekletter.length()+1;
+                }
+
+            }
+
+
+
+
+
             i++;
         }
-        if (binaryOperandIndex != 0)
-        {
 
-        }else{
-
-        }
 
 
 
@@ -77,7 +98,16 @@ public class ExpressionTree {
         {
             et.Display();
         }
-        System.out.print("id=\""+this.mObject.getExpression()+"\",");
+        if(this.hasMathObject) {
+            System.out.print("id=\"" + this.mObject.getExpression() + "\",");
+        }else{
+            String str = "";
+            for(int i = 0; i<this.currentExpression.length; i++)
+            {
+                str += this.currentExpression[i];
+            }
+            System.out.print("str=\""+str+"\",");
+        }
         for(ExpressionTree et : childsRight)
         {
             et.Display();
