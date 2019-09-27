@@ -1,3 +1,5 @@
+import tiles.TileType;
+
 public class MathObject {
 
 

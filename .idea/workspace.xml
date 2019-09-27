@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/UnknownTile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/structures/TilePosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/structures/Tuple2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpressionTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MathObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MathObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/TileType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/FormulaImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,13 +42,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jlatexmath-1.0.7.jar!/" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.23724137" />
     <property name="project.structure.side.proportion" value="0.275018" />
@@ -97,6 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567440903131</updated>
       <workItem from="1567583789804" duration="3781000" />
+      <workItem from="1569584632449" duration="2234000" />
     </task>
     <task id="LOCAL-00001" summary="Commit test.">
       <created>1567441047307</created>

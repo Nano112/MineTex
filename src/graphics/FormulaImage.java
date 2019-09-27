@@ -3,7 +3,7 @@ package graphics;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Image {
+public class FormulaImage {
     //Class to generate and edit a image
     BufferedImage image;
     int width;
@@ -14,7 +14,7 @@ public class Image {
     MyColor highGround;
 
 
-    public Image(int w, int h, MyColor bg, MyColor fg)
+    public FormulaImage(int w, int h, MyColor bg, MyColor fg)
     {
         this.width = w;
         this.height = h;
@@ -45,6 +45,7 @@ public class Image {
         this.image.setRGB(x,y,this.foreGround.getColorValue().getRGB());
     }
 
+    public
 
 
 

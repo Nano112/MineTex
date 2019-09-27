@@ -1,5 +1,6 @@
 import Exceptions.BadFormatting;
 import Exceptions.IncorrectBracketException;
+import tiles.TileType;
 import tiles.Tiles;
 
 import java.util.ArrayList;
