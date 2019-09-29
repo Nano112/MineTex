@@ -11,7 +11,7 @@ public class Main
 
                 ExpressionTree test = new ExpressionTree("a+b+\\frac{1}{2}=\\sum{k=1}{n}{2k-1}+j");
                 test.parse();
-                test.Display();
+                test.Display(0);
         }
 }
 

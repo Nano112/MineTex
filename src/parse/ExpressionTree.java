@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 public class ExpressionTree {
 
-
     ArrayList<ExpressionTree> childsLeft = new ArrayList();
     ArrayList<ExpressionTree> childsRight = new ArrayList();
     String[] currentExpression;
@@ -149,20 +148,14 @@ public class ExpressionTree {
                             MathObject mobj = new MathObject("{}", TileType.Brackets);
                             ExpressionTree exp = new ExpressionTree(mobj, this.offset+index);
                             exp.childsRight.add(new ExpressionTree(subString(this.currentExpression, index+1, nextbracketindex), this.offset));
-
                             bracketsExpression.add(exp);
-
-
                             bracketsneeded--;
                             index = nextbracketindex;
                         }
-
                         if(bracketsneeded == 0)
                         {    //If we have nothing left, we can just put the oject inside the treeExpression, otherwise we need to create a branch we a concat operator
                             ExpressionTree opexp = new ExpressionTree(mob, this.offset+i);
                             opexp.childsRight = bracketsExpression;
-
-
                             if(index == this.currentExpression.length-1)
                             {
                                 if(!this.hasMathObject)
@@ -174,11 +167,7 @@ public class ExpressionTree {
 
                                     this.childsRight.add(opexp);
                                 }
-
-
-
                             }else{
-
                                 String[] reste = subString(this.currentExpression, index+1, this.currentExpression.length);
                                 ExpressionTree resteexp = new ExpressionTree(reste, this.offset+index+1);
                                 MathObject concat = MathObject.concat;
@@ -195,19 +184,15 @@ public class ExpressionTree {
                                     this.childsRight.add(resteexp);
                                 }
                             }
-
                             for(ExpressionTree et : this.childsRight)
                             {
                                 et.parse();
                             }
-
                             for(ExpressionTree et : this.childsLeft)
                             {
                                 et.parse();
                             }
                             i = index;
-
-
                             return;
                         }
                         index++;
@@ -224,7 +209,7 @@ public class ExpressionTree {
 
 
     }
-    public void printDb(String[] str)
+    public void printDebug(String[] str)
     {
         String res = "";
         for(int i = 0; i < str.length; i++)
@@ -233,39 +218,61 @@ public class ExpressionTree {
         }
         System.out.println(res);
     }
-    public void Display()
+
+    public String mult(String str, int depth)
+    {
+        if(depth == 0) return "";
+        String str_  = "";
+        for(int i = 0;i<depth; i++)
+        {
+            str_ += str;
+        }
+        return str_;
+    }
+    public void Display(int depth)
     {
 
+        String line = "    ";
+        line = mult(line, depth);
 
+        System.out.println(line+"{");
         if(this.hasMathObject)
         {
-            System.out.print("(id)"+this.mObject.expression);
+
+            System.out.println(line+"    id=\""+this.mObject.expression+"\"");
         }else{
             String res = "";
             for(int i = 0; i < this.currentExpression.length; i++)
             {
                 res += this.currentExpression[i];
             }
-            System.out.print("\""+res+"\"");
+            System.out.println(line+"    " + "\""+res+"\"");
         }
 
         if(this.childsRight.size()+this.childsLeft.size() != 0)
         {
-            System.out.print(",{");
 
+            if(this.childsLeft.size() != 0)
+            {
+                System.out.println(line+"   ChildsLeft=");
+            }
             for(ExpressionTree et : this.childsLeft)
             {
-                et.Display();
+                et.Display(depth+1);
             }
-
+            if(this.childsRight.size() != 0)
+            {
+                System.out.println(line+"    ChildsRight=");
+            }
             for(ExpressionTree et : this.childsRight)
             {
-                et.Display();
+                et.Display(depth+1);
             }
 
 
-            System.out.print("}");
+
         }
+        System.out.println(line+"}");
     }
     private String[] subString(String[] str, int start, int end)
     {

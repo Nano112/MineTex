@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="made a functional parser base">
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/BadBracketsFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/UnknownTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structures/TilePosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structures/Tuple2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tiles/TileOperand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tiles/TileType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoundingBox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/ExpressionTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/Latex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MathObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/MathObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ParseTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/ParseTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TileType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/FormulaImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiles/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parse/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/ExpressionTree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569598970003</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="made a functional parser base">
+      <created>1569616580899</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569616580899</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +215,7 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/Nano11258/MineTex&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="made a functional parser (partially)." />
     <MESSAGE value="Made a functional parser base." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a functional parser base." />
+    <MESSAGE value="made a functional parser base" />
+    <option name="LAST_COMMIT_MESSAGE" value="made a functional parser base" />
   </component>
 </project>
