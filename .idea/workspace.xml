@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="Ajout de certaines correspondance de tiles">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/UnknownCharacter.java" afterDir="false" />
+    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lookup_3x5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lookup_5x7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testOut." afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/UnknownTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/UnknownTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structures/TilePosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structures/TilePosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structures/Tuple2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tiles/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles/lookup_3x5.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lookup_3x5.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles/lookup_5x7.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lookup_5x7.bmp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,15 +50,15 @@
     <property name="project.structure.side.proportion" value="0.275018" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
       <recent name="latex" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/latex" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -186,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569616580899</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Retour des Sous Images">
+      <created>1569839808743</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569839808743</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +228,7 @@
     <MESSAGE value="made a functional parser (partially)." />
     <MESSAGE value="Made a functional parser base." />
     <MESSAGE value="made a functional parser base" />
-    <option name="LAST_COMMIT_MESSAGE" value="made a functional parser base" />
+    <MESSAGE value="Retour des Sous Images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retour des Sous Images" />
   </component>
 </project>
