@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="made a functional parser base">
+    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="Ajout de certaines correspondance de tiles">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/UnknownCharacter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parse/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/ExpressionTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exceptions/UnknownTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/UnknownTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structures/TilePosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structures/TilePosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structures/Tuple2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

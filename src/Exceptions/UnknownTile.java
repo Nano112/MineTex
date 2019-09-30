@@ -7,7 +7,7 @@ public class UnknownTile extends Exception {
 
     }
 
-    public String tostring()
+    public String toString()
     {
         return "Unknown tile";
     }
