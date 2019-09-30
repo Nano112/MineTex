@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="made a functional parser base">
+    <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/testOut.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parse/ExpressionTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parse/ExpressionTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,15 +46,16 @@
     <property name="project.structure.side.proportion" value="0.275018" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
       <recent name="latex" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/latex" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ressources" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -182,7 +184,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569616580899</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Retour des Sous Images">
+      <created>1569839808743</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569839808743</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed output tiles">
+      <created>1569844169037</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569844169037</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +232,8 @@
     <MESSAGE value="made a functional parser (partially)." />
     <MESSAGE value="Made a functional parser base." />
     <MESSAGE value="made a functional parser base" />
-    <option name="LAST_COMMIT_MESSAGE" value="made a functional parser base" />
+    <MESSAGE value="Retour des Sous Images" />
+    <MESSAGE value="Fixed output tiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed output tiles" />
   </component>
 </project>
