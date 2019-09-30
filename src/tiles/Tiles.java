@@ -618,9 +618,9 @@ public class Tiles {
         switch (size)
         {
             case 1:
-                return tileSet1.getSubimage(tp.collumn,tp.row, tp.width, tp.height);
+                return tileSet1.getSubimage(tp.collumn*tp.width,tp.row*tp.height, tp.width, tp.height);
             case 2:
-                return tileSet2.getSubimage(tp.collumn, tp.row, tp.width, tp.height);
+                return tileSet2.getSubimage(tp.collumn*tp.width, tp.row*tp.height, tp.width, tp.height);
             default:
                 throw new UnknownTile();
         }

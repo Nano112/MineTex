@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e1e71fc-8cfe-4b9b-acfb-7d93f7b5ff96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lookup_3x5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lookup_5x7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testOut." afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testOut.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tiles/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Tiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiles/lookup_3x5.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lookup_3x5.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiles/lookup_5x7.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lookup_5x7.bmp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +54,7 @@
       <recent name="$PROJECT_DIR$/src/latex" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ressources" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -194,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569839808743</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed output tiles">
+      <created>1569844169037</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569844169037</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +233,7 @@
     <MESSAGE value="Made a functional parser base." />
     <MESSAGE value="made a functional parser base" />
     <MESSAGE value="Retour des Sous Images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retour des Sous Images" />
+    <MESSAGE value="Fixed output tiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed output tiles" />
   </component>
 </project>

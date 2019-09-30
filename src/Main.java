@@ -16,7 +16,7 @@ public class Main
                 test.parse();
                 test.Display(0);
                 //*/
-                ImageIO.write(tiles.getTile("a",2),"png",new File("testOut."));
+                ImageIO.write(tiles.getTile("1",1),"png",new File("testOut.png"));
         }
 }
 
