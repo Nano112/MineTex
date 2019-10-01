@@ -531,17 +531,17 @@ public class Tiles {
         boolean flag;
         for (String op : tilesBigGreekLetters)
         {
-            String[] opa = op.split("");
-            flag = true;
-            for (int i = 0; i < op.length(); i++)
-            {
-                if(!opa[i].equals(str[i+index]))
-                {
-                    flag = false;
+            if(str.length > op.length()) {
+                String[] opa = op.split("");
+                flag = true;
+                for (int i = 0; i < op.length(); i++) {
+                    if (!opa[i].equals(str[i + index])) {
+                        flag = false;
+                    }
                 }
-            }
 
-            if (flag) return op;
+                if (flag) return op;
+            }
         }
         return null;
     }
@@ -551,18 +551,18 @@ public class Tiles {
         boolean flag;
         for(String op : tilesSmallGreekLetters)
         {
-            String[] opa = op.split("");
-            flag = true;
-            for(int i = 0; i<op.length(); i++)
-            {
-                if(!opa[i].equals(str[i+index]))
-                {
-                    flag = false;
+
+            if(str.length > op.length()) {
+                String[] opa = op.split("");
+                flag = true;
+                for (int i = 0; i < op.length(); i++) {
+                    if (!opa[i].equals(str[i + index])) {
+                        flag = false;
+                    }
                 }
+
+                if (flag) return op;
             }
-
-            if(flag) return op;
-
         }
         return null;
     }
@@ -572,19 +572,19 @@ public class Tiles {
         boolean flag;
         for(String op : tilesOperands)
         {
-            String[] opa = op.split("");
-            flag = true;
-            for(int i = 0; i<op.length(); i++)
-            {
 
-                if(!opa[i].equals(str[i+index]))
-                {
-                    flag = false;
+            if(str.length > op.length()) {
+                String[] opa = op.split("");
+                flag = true;
+                for (int i = 0; i < op.length(); i++) {
+
+                    if (!opa[i].equals(str[i + index])) {
+                        flag = false;
+                    }
                 }
+
+                if (flag) return op;
             }
-
-            if(flag) return op;
-
         }
         return null;
     }
