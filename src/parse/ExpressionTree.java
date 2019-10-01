@@ -7,6 +7,7 @@ import tiles.TileOperand;
 import tiles.TileType;
 import tiles.Tiles;
 
+import javax.rmi.ssl.SslRMIClientSocketFactory;
 import java.util.ArrayList;
 
 public class ExpressionTree {
@@ -97,11 +98,19 @@ public class ExpressionTree {
         i = 0;
         while(i < this.currentExpression.length)//Step 3
         {
+
+            if (this.currentExpression[i].equals("{")) //We do not take into account the content inside brackets -> they will be handled afterwards.
+            {
+                i = findNextBracket(i)-1;
+            }
+
             if(this.currentExpression[i].equals("\\"))
             {
                 String biggreekletter = Tiles.lookForBigGreekLetter(this.currentExpression, i);
                 String smallgreekletter = Tiles.lookForBigGreekLetter(this.currentExpression, i);
                 String tileoperandletter = Tiles.loofFortilesOperands(this.currentExpression,i);
+                System.out.println(tileoperandletter);
+                printDebug(this.currentExpression);
                 if(biggreekletter != null)
                 {
                     MathObject mob = new MathObject(biggreekletter, TileType.BigGreekLetter);
@@ -198,8 +207,6 @@ public class ExpressionTree {
 
             i++;
         }
-
-
     }
     public void printDebug(String[] str)
     {
@@ -223,14 +230,11 @@ public class ExpressionTree {
     }
     public void Display(int depth)
     {
-
         String line = "    ";
         line = mult(line, depth);
-
         System.out.println(line+"{");
         if(this.hasMathObject)
         {
-
             System.out.println(line+"    id=\""+this.mObject.expression+"\""+ ",type="+this.mObject.tt);
         }else{
             String res = "";
@@ -243,10 +247,9 @@ public class ExpressionTree {
 
         if(this.childsRight.size()+this.childsLeft.size() != 0)
         {
-
             if(this.childsLeft.size() != 0)
             {
-                System.out.println(line+"   ChildsLeft=");
+                System.out.println(line+"    ChildsLeft=");
             }
             for(ExpressionTree et : this.childsLeft)
             {
@@ -260,9 +263,6 @@ public class ExpressionTree {
             {
                 et.Display(depth+1);
             }
-
-
-
         }
         System.out.println(line+"}");
     }
