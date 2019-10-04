@@ -9,5 +9,6 @@ public enum TileType {
     BOperand,
     Operand,
     Brackets,
+    Special,
     Concat
 }

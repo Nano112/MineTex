@@ -7,7 +7,7 @@ import tiles.TileOperand;
 import tiles.TileType;
 import tiles.Tiles;
 
-import javax.rmi.ssl.SslRMIClientSocketFactory;
+import java.beans.Expression;
 import java.util.ArrayList;
 
 public class ExpressionTree {
@@ -70,14 +70,16 @@ public class ExpressionTree {
         //Step 1: search for binary operand : "+", "=" , ",", "=>", etc... outside of '{ }'
         //Step 2: Parentheses, Brackets..
         //Step 3: search for "/" character and identify if it is an operand or a special letter.
-
+        //Step 4: check for numbers and letters only.
         int binaryOperandIndex = 0;
         int i= 0;
         //Step 1
         while(i < this.currentExpression.length) {
-            if (this.currentExpression[i].equals("{")) //We do not take into account the binary operands inside brackets -> they will be handled afterwards.
-            {
-                i = findNextBracket(i)-1;
+            for(int j = 0; j<3; j++) {
+                if (this.currentExpression[i].equals(Tiles.tilesSpecial[2*j])) //We do not take into account the binary operands inside brackets -> they will be handled afterwards.
+                {
+                    i = findNext(Tiles.tilesSpecial[2*j],Tiles.tilesSpecial[2*j+1],i) - 1;
+                }
             }
             if (Tiles.isBinaryOperand(this.currentExpression[i])) {
                 this.mObject = new MathObject(this.currentExpression[i], TileType.BOperand);
@@ -96,7 +98,7 @@ public class ExpressionTree {
             i++;
         }
         i = 0;
-        while(i < this.currentExpression.length)//Step 3
+        while(i < this.currentExpression.length)//Step 2
         {
 
             if (this.currentExpression[i].equals("{")) //We do not take into account the content inside brackets -> they will be handled afterwards.
@@ -109,8 +111,6 @@ public class ExpressionTree {
                 String biggreekletter = Tiles.lookForBigGreekLetter(this.currentExpression, i);
                 String smallgreekletter = Tiles.lookForBigGreekLetter(this.currentExpression, i);
                 String tileoperandletter = Tiles.loofFortilesOperands(this.currentExpression,i);
-                System.out.println(tileoperandletter);
-                printDebug(this.currentExpression);
                 if(biggreekletter != null)
                 {
                     MathObject mob = new MathObject(biggreekletter, TileType.BigGreekLetter);
@@ -205,6 +205,54 @@ public class ExpressionTree {
                 }
             }
 
+            i++;
+        }
+        i = 0;
+        while(i < this.currentExpression.length)
+        {
+            if (this.currentExpression[i].equals("{")) //We do not take into account the content inside brackets -> they will be handled afterwards.
+            {
+                i = findNextBracket(i)-1;
+            }
+            for(int x = 0; x<3; x++)
+            {
+                if(this.currentExpression[i].equals(Tiles.tilesSpecial[2*x])) {
+                    int index = findNext(Tiles.tilesSpecial[2*x], Tiles.tilesSpecial[2*x+1], i);
+                    this.mObject = MathObject.concat;
+                    this.hasMathObject = true;
+                    String[] reste_gauche = subString(this.currentExpression, 0, i);
+                    String[] reste_droite = subString(this.currentExpression, index , this.currentExpression.length);
+                    String[] par = subString(this.currentExpression, i + 1, index-1);
+                    ExpressionTree exp = new ExpressionTree(par, this.offset + i);
+                    ExpressionTree ex = new ExpressionTree(new MathObject(Tiles.tilesSpecial[2*x]+Tiles.tilesSpecial[2*x+1], TileType.Special), this.offset+i);
+                    exp.parse();
+                    ex.childsLeft.add(exp);
+                    if (reste_droite.length == 0 && reste_gauche.length == 0) {
+                        this.childsLeft.add(ex);
+                    }
+                    if (reste_droite.length != 0 && reste_gauche.length == 0) {
+                        ExpressionTree par1 = new ExpressionTree(reste_droite, 0);
+                        par1.parse();
+                        this.childsLeft.add(ex);
+                        this.childsRight.add(par1);
+                    }
+                    if (reste_droite.length == 0 && reste_gauche.length != 0) {
+                        ExpressionTree par2 = new ExpressionTree(reste_gauche, this.offset + index);
+                        par2.parse();
+                        this.childsRight.add(ex);
+                        this.childsLeft.add(par2);
+                    }
+                    if (reste_droite.length != 0 && reste_gauche.length != 0) {
+                        ExpressionTree par1 = new ExpressionTree(reste_droite, 0);
+                        ExpressionTree par2 = new ExpressionTree(reste_gauche, this.offset + index);
+                        par1.parse();
+                        par2.parse();
+                        this.childsLeft.add(par2);
+                        this.childsLeft.add(ex);
+                        this.childsRight.add(par1);
+                    }
+                }
+            }
             i++;
         }
     }
@@ -305,6 +353,31 @@ public class ExpressionTree {
         }
     }
 
+    public int findNext(String str1, String str2, int Start) throws IncorrectBracketException {
+        int i = Start+1;
+        int c = 1;
+        while(c!=0 && i<this.currentExpression.length)
+        {
+            String car = this.currentExpression[i];
+
+
+            if (car.equals(str1))
+            {
+                c += 1;
+            }
+            if (car.equals(str2))
+            {
+                c-= 1;
+            }
+            i++;
+        }
+        if(c != 0)
+        {
+            throw new IncorrectBracketException(this.offset+Start);
+        }else{
+            return i;
+        }
+    }
     public void AddChildLeft(ExpressionTree et)
     {
         childsLeft.add(et);

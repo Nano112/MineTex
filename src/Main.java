@@ -15,7 +15,7 @@ public class Main
 
                 Tiles tiles = new Tiles();
 
-                ExpressionTree test = new ExpressionTree("a+b+\\frac{1}{2}=\\sum{k=1}{n}{2k-1}+j");
+                ExpressionTree test = new ExpressionTree("a+b+(a+b)\\frac{1}{2}=\\sum{k=1}{n}{2k-1}+j");
                 test.parse();
                 test.Display(0);
                 //*/
