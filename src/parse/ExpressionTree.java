@@ -67,6 +67,9 @@ public class ExpressionTree {
     }
 
     public void parse() throws BadFormatting, IncorrectBracketException, BadBracketsFormatException {
+
+
+
         //Step 1: search for binary operand : "+", "=" , ",", "=>", etc... outside of '{ }'
         //Step 2: Parentheses, Brackets..
         //Step 3: search for "/" character and identify if it is an operand or a special letter.
@@ -108,6 +111,7 @@ public class ExpressionTree {
 
             if(this.currentExpression[i].equals("\\"))
             {
+                //Search for a token
                 String biggreekletter = Tiles.lookForBigGreekLetter(this.currentExpression, i);
                 String smallgreekletter = Tiles.lookForBigGreekLetter(this.currentExpression, i);
                 String tileoperandletter = Tiles.loofFortilesOperands(this.currentExpression,i);
@@ -217,6 +221,7 @@ public class ExpressionTree {
             for(int x = 0; x<3; x++)
             {
                 if(this.currentExpression[i].equals(Tiles.tilesSpecial[2*x])) {
+
                     int index = findNext(Tiles.tilesSpecial[2*x], Tiles.tilesSpecial[2*x+1], i);
                     this.mObject = MathObject.concat;
                     this.hasMathObject = true;
@@ -224,6 +229,9 @@ public class ExpressionTree {
                     String[] reste_droite = subString(this.currentExpression, index , this.currentExpression.length);
                     String[] par = subString(this.currentExpression, i + 1, index-1);
                     ExpressionTree exp = new ExpressionTree(par, this.offset + i);
+
+
+
                     ExpressionTree ex = new ExpressionTree(new MathObject(Tiles.tilesSpecial[2*x]+Tiles.tilesSpecial[2*x+1], TileType.Special), this.offset+i);
                     exp.parse();
                     ex.childsLeft.add(exp);
@@ -251,10 +259,22 @@ public class ExpressionTree {
                         this.childsLeft.add(ex);
                         this.childsRight.add(par1);
                     }
+                    return;
                 }
+
+
             }
             i++;
+
+
         }
+
+        String tr = "";
+        for(String str : this.currentExpression)
+        {
+            tr += str;
+        }
+        System.out.println(tr);
     }
     public void printDebug(String[] str)
     {

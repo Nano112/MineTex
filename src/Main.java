@@ -14,8 +14,9 @@ public class Main
         public static void main(String[] args) throws IOException, IncorrectBracketException, BadFormatting, BadBracketsFormatException, UnknownTile, UnknownCharacter {
 
                 Tiles tiles = new Tiles();
-
-                ExpressionTree test = new ExpressionTree("a+b+(a+b)\\frac{1}{2}=\\sum{k=1}{n}{2k-1}+j");
+                String input = "a+b+a(a+b)\\frac{1}{2}=\\sum{k=1}{n}{(2k-1)}+j";
+                ExpressionTree test = new ExpressionTree(input);
+                System.out.println("input="+input);
                 test.parse();
                 test.Display(0);
                 //*/
